@@ -96,7 +96,6 @@ std::vector<std::string> Recognizer::parseResults(std::string results, float con
 int Recognizer::checkResults(std::vector<std::string> results)
 {
 	std::string foundResult = "";
-	//std::cout << "Checking Results" << std::endl;
 	
 	for (std::string& result : results)
 	{
