@@ -20,26 +20,20 @@ int VoiceInputTaker::Init(int sampleRate, int sampleSize)
 
 std::vector<ALCshort> VoiceInputTaker::GetInput()
 {
-    //std::cout << "In Get Input" << std::endl;
+
     alcCaptureStart(mDevice);
 
     std::vector<ALCshort> buffer(mSampleSize);
     ALCint samplesIn;
 
-    // Wait for some samples to become available
     do {
         alcGetIntegerv(mDevice, ALC_CAPTURE_SAMPLES, 1, &samplesIn);
     } while (samplesIn < mSampleSize);
 
-    // Grab the samples
-    alcCaptureSamples(mDevice, &buffer[0], mSampleSize);
 
-    // We've got the samples, stop capturing
+    alcCaptureSamples(mDevice, &buffer[0], mSampleSize);
     alcCaptureStop(mDevice);
     
-
-    // Do something with the samples
-    // In a real program, you'd probably write them to a file or send them over the network...
 
     return buffer;
 }
