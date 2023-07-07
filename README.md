@@ -7,8 +7,9 @@ In so many applications, speech recognition is only necessary for a several comm
 This algorithm solves this problem for the purpose of better recognition when only a several commands are necessary to be recognized. 
 
 Dependencies:
-- Vosk (Library and an English Model) : https://github.com/alphacep/vosk-api/releases
-                                        https://alphacephei.com/vosk/models
+- Vosk (Library and an English Model) :
+- https://github.com/alphacep/vosk-api/releases
+- https://alphacephei.com/vosk/models
 
 - OpenAL : https://www.openal.org/downloads/
 - nlohmann/json : https://github.com/nlohmann/json
